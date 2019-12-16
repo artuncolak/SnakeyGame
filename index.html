@@ -1,0 +1,66 @@
+<html style="background-color: #2f3236;">
+
+<head>
+    <title>Snakey</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/assets/Icon.png">
+</head>
+
+<body>
+    <div class="sidebar" style="display: none;" id="sidebar">
+        <button class="backButton" onclick="window.location.reload()">Back</button>
+        <p id="scoreText">Score<br><span id="score"></span></p>
+        <br>
+        <p id="howToPlay">How to Play 
+            <br> <br> Move: <br> <span style="font-size: 30;">🠹 🠸 🠻 🠺</span>
+            <br> <br> Pause: <br>ESC
+        </p>
+    </div>
+
+    <div class="mainMenu" id="mainMenu">
+
+        <h1 class="snakeyTitle">Snakey</h1>
+
+        <div class="buttonHolderStart">
+            <button onclick="startGame()" id="startGameButton">Start</button>
+            <br><br><br>
+        </div>
+
+        <div class="buttonHolderOptions" id="optionsButton">
+            <button id="optionsButton" onclick="optionsButtonClicked()">Options</button>
+        </div>
+
+        <div class="optionsMenu" id="optionsMenu" style="display: none;">
+            <div class="buttonHolderOptionsMenu">
+                <h1 class="optionsText">Difficulty</h1>
+                <button class="optionsButton" style="background-color: #44474b;" id="optionEasy"
+                    onclick="difficultyButtonClicked('Easy')">Easy (1x)</button>
+                <button class="optionsButton" id="optionMedium"
+                    onclick="difficultyButtonClicked('Medium')">Medium (2x)</button>
+                <button class="optionsButton" id="optionHard" onclick="difficultyButtonClicked('Hard')">Hard (3x)</button>
+                <br><br><br>
+                <h1 class="optionsText">Walls</h1>
+                <button class="optionsButton" id="optionWallOn" onclick="wallButtonClicked('On')">On (2x)</button>
+                <button class="optionsButton" style="background-color: #44474b;" id="optionWallOff"
+                    onclick="wallButtonClicked('Off')">Off(1x)</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gameOverMenu" id="gameOverMenu" style="display: none;">
+        <p class=youLost>You Lost! :'(</p>
+
+        <p class="scoreTextHolder">Score <br><span id="gameOverScore"></span></p>
+
+        <button class="mainMenuButtonHolder" onclick="window.location.reload()">Main Menu</button>
+        <br><br><br>
+        <button class="playAgainButtonHolder" onclick="startGame()">Play Again</button>
+    </div>
+
+    <script src="js/Food.js"></script>
+    <script src="js/GameArea.js"></script>
+    <script src="js/Snake.js"></script>
+    <script src="js/Game.js"></script>
+</body>
+
+</html>

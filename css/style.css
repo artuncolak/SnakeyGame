@@ -1,0 +1,199 @@
+body{
+    font-family: roboto;
+}
+
+@font-face{
+    font-family: "snake";
+    src: url("../assets/fonts/Snake.ttf");
+}
+
+@font-face{
+    font-family: "roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+#scoreText{
+    padding-top: 5%;
+    text-align: center;
+    color: #45c467;
+    font-size: 25;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+#score{
+    text-align: center;
+    color: #45c467;
+    font-size: 25;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+.backButton{
+    margin: auto;
+    background-color: transparent;
+    border-color: black;
+    border-radius: 20px;
+    height: 32px;
+    width: 100px;
+    color: #45c467;
+    font-size: 20px;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+    font-family: roboto;
+}
+
+.backButton:hover{
+    background-color: #44474b;
+}
+
+.sidebar {
+    text-align: center;
+    height: 100%;
+    width: 225px;
+    position: fixed;
+    top: 50;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+.snakeyTitle{
+    padding-top: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 120;
+    color: #45c467;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-family: snake;
+}
+
+.buttonHolderOptions{
+    top: 50%;
+    text-align: center;
+}
+
+.buttonHolderOptionsMenu{
+    text-align: center;
+}
+
+.buttonHolderStart{
+    top: 50%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.optionsButton{
+    margin: auto;
+    background-color: transparent;
+    border-color: black;
+    border-radius: 20px;
+    height: 32px;
+    width: 130px;
+    color: #45c467;
+    font-size: 20px;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+    font-family: roboto;
+}
+
+.optionsButton:hover{
+    background-color: #44474b;
+}
+
+.optionsText{
+    color: #45c467;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#startGameButton{
+    margin: auto;
+    background-color: transparent;
+    border-color: black;
+    border-radius: 20px;
+    height: 75px;
+    width: 200px;
+    color: #45c467;
+    font-size: 40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: roboto;
+}
+
+#startGameButton:hover{
+    background-color: #44474b;
+}
+
+#optionsButton{
+    margin: auto;
+    background-color: transparent;
+    border-color: black;
+    border-radius: 20px;
+    height: 75px;
+    width: 200px;
+    color: #45c467;
+    font-size: 40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: roboto;
+}
+
+#optionsButton:hover{
+    background-color: #44474b;
+}
+
+#gameArea{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 150;
+    right: 0;
+    margin:auto;
+}
+
+.gameOverMenu{
+    text-align: center;
+
+    width: 500px;
+    height: 700px;
+	
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  	
+	margin: auto;
+}
+
+.playAgainButtonHolder, .mainMenuButtonHolder{
+    margin: auto;
+    background-color: transparent;
+    border-color: black;
+    border-radius: 20px;
+    height: 70px;
+    width: 250px;
+    color: #45c467;
+    font-size: 30px;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+    font-family: roboto;
+}
+
+.playAgainButtonHolder:hover, .mainMenuButtonHolder:hover{
+    background-color: #44474b;
+}
+
+.youLost{
+    color: #45c467;
+    font-size: 70px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: roboto;
+}
+
+.scoreTextHolder{
+    text-align: center;
+    color: #45c467;
+    font-size: 35;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#howToPlay{
+    text-align: center;
+    color: #45c467;
+    font-size: 25;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
