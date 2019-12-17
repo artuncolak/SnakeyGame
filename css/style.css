@@ -139,7 +139,7 @@ body{
 #gameArea{
     position: absolute;
     top:0;
-    bottom: 0;
+    bottom:0;
     left: 150;
     right: 0;
     margin:auto;
@@ -195,5 +195,32 @@ body{
     text-align: center;
     color: #45c467;
     font-size: 25;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
+#mobileControllers{
+    position: absolute;
+    bottom: 100px;
+    left: 30;
+}
+
+.mobileButton{
+    margin: 15px;
+    background-color: transparent;
+    border-color: black;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    color: #45c467;
+    font-size: 100px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: roboto;
+}
+
+#scoreTextMobile{
+    padding-top: 5%;
+    text-align: center;
+    color: #45c467;
+    font-size: 75;
     text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
 }

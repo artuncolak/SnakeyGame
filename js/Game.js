@@ -20,8 +20,17 @@ let gameFrames;
 var deathSound = new Audio("./assets/sounds/death.wav");
 
 function startGame() {
+
+
     document.getElementById("mainMenu").style.display = "none";
-    document.getElementById("sidebar").style.display = "inline";
+
+    if (window.mobilecheck()){
+        document.getElementById("mobileControllers").style.display = "block";
+        document.getElementById("scoreTextMobile").style.display = "inline";
+    }else{
+        document.getElementById("sidebar").style.display = "block";
+    }
+
     snake = new Snake();
     gameArea = new GameArea();
     //Starts the game loop
@@ -31,7 +40,9 @@ function startGame() {
 //Main Game Loop
 function game() {
     gameArea.clear();
+
     score.innerText = (((snake.length - 3) * scoreMultiplies * wallBonus));
+    document.getElementById("scoreMobile").innerText = score.innerText;
 
     if (food == null) food = new Food();
 
@@ -141,5 +152,28 @@ function wallButtonClicked(wallOption) {
             wall = false;
             wallBonus = WALL_BONUS.off;
             break;
+    }
+}
+
+function mobileControllerPressed(button){
+    if (button == inputs.up && isPressed.up == false && isPressed.down == false && !isTurned) {
+        snake.heading = "up";
+        isPressed = { left: false, up: true, right: false, down: false };
+        isTurned = true;
+
+    } else if (button == inputs.down && isPressed.down == false && isPressed.up == false && !isTurned) {
+        snake.heading = "down";
+        isPressed = { left: false, up: false, right: false, down: true };
+        isTurned = true;
+
+    } else if (button == inputs.left && isPressed.left == false && isPressed.right == false && !isTurned) {
+        snake.heading = "left";
+        isPressed = { left: true, up: false, right: false, down: false };
+        isTurned = true;
+
+    } else if (button == inputs.right && isPressed.right == false && isPressed.left == false && !isTurned) {
+        snake.heading = "right"
+        isPressed = { left: false, up: false, right: true, down: false };
+        isTurned = true;
     }
 }

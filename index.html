@@ -56,10 +56,19 @@
         <button class="playAgainButtonHolder" onclick="startGame()">Play Again</button>
     </div>
 
+    <p id="scoreTextMobile" style="display: none;">Score: <span id="scoreMobile"></span></p>
+
+    <div id="mobileControllers" style="display: none">
+        <button class=mobileButton onclick="mobileControllerPressed(inputs.up)">▲</button>
+        <button class=mobileButton onclick="mobileControllerPressed(inputs.down)">▼</button>
+        <button class=mobileButton onclick="mobileControllerPressed(inputs.left)">◄</button>
+        <button class=mobileButton onclick="mobileControllerPressed(inputs.right)">►</button>
+    </div>
+
+    <script src="js/detectmobilebrowser.js"></script>
     <script src="js/Food.js"></script>
     <script src="js/GameArea.js"></script>
     <script src="js/Snake.js"></script>
     <script src="js/Game.js"></script>
 </body>
-
 </html>
