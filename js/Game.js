@@ -1,13 +1,12 @@
+const DIFFICULTY = { easy: 100, medium: 50, hard: 25 };
+const SCORE_MULTIPLIES = {easy: 1, medium: 2, hard: 3};
+const WALL_BONUS = {off: 1, on: 2};
+
 var gameArea;
 var snake;
 var food;
 var wall = false;
-
 var score = document.getElementById("score");
-
-const DIFFICULTY = { easy: 100, medium: 50, hard: 25 };
-const SCORE_MULTIPLIES = {easy: 1, medium: 2, hard: 3};
-const WALL_BONUS = {off: 1, on: 2};
 
 var difficulty = DIFFICULTY.easy;
 var wallBonus = WALL_BONUS.off;
@@ -18,21 +17,26 @@ let inputs = { left: 37, up: 38, right: 39, down: 40, escape: 27 };
 let isPressed = { left: false, up: false, right: false, down: false };
 let gameFrames;
 
+var deathSound = new Audio("./assets/sounds/death.wav");
+
 function startGame() {
     document.getElementById("mainMenu").style.display = "none";
     document.getElementById("sidebar").style.display = "inline";
     snake = new Snake();
     gameArea = new GameArea();
+    //Starts the game loop
     gameFrames = setInterval(game, difficulty);
 }
 
+//Main Game Loop
 function game() {
+    gameArea.clear();
     score.innerText = (((snake.length - 3) * scoreMultiplies * wallBonus));
 
     if (food == null) food = new Food();
 
-    gameArea.clear();
     getKeyPress();
+    
     snake.move();
     food.draw();
     snake.draw();
@@ -52,6 +56,7 @@ function checkCollision() {
 }
 
 function gameOver() {
+    deathSound.play();
     document.getElementById("sidebar").style.display = "none";
     var area = document.getElementById("gameArea");
     area.parentNode.removeChild(area);
@@ -92,6 +97,7 @@ function getKeyPress() {
     }
 }
 
+//Button Handlers
 function optionsButtonClicked() {
     document.getElementById("optionsButton").style.display = "none";
     document.getElementById("optionsMenu").style.display = "inline";

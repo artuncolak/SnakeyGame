@@ -18,7 +18,7 @@ class GameArea{
         document.body.appendChild(this.canvas);
     }
 
-    //if dimensions %15 == 0
+    //Generate canvas height and width based on grid
     getWindowHeight(){
         let dimension = window.innerHeight - 100;
         do{

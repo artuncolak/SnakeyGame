@@ -10,6 +10,7 @@ class Food {
         this.position = this.getRandomLocation();
     }
 
+    //Generating random location based on grid
     getRandomLocation(){
         let position = {x: 0, y: 0};
 
