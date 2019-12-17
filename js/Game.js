@@ -19,6 +19,12 @@ let gameFrames;
 
 var deathSound = new Audio("./assets/sounds/death.wav");
 
+if (window.mobilecheck() && 'addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+    }, false);
+}
+
 function startGame() {
 
 

@@ -3,6 +3,7 @@
 <head>
     <title>Snakey</title>
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 
 <body>
@@ -10,7 +11,7 @@
         <button class="backButton" onclick="window.location.reload()">Back</button>
         <p id="scoreText">Score<br><span id="score"></span></p>
         <br>
-        <p id="howToPlay">How to Play 
+        <p id="howToPlay">How to Play
             <br> <br> Move: <br> <span style="font-size: 30;">🠹 🠸 🠻 🠺</span>
             <br> <br> Pause: <br>ESC
         </p>
@@ -34,9 +35,10 @@
                 <h1 class="optionsText">Difficulty</h1>
                 <button class="optionsButton" style="background-color: #44474b;" id="optionEasy"
                     onclick="difficultyButtonClicked('Easy')">Easy (1x)</button>
-                <button class="optionsButton" id="optionMedium"
-                    onclick="difficultyButtonClicked('Medium')">Medium (2x)</button>
-                <button class="optionsButton" id="optionHard" onclick="difficultyButtonClicked('Hard')">Hard (3x)</button>
+                <button class="optionsButton" id="optionMedium" onclick="difficultyButtonClicked('Medium')">Medium
+                    (2x)</button>
+                <button class="optionsButton" id="optionHard" onclick="difficultyButtonClicked('Hard')">Hard
+                    (3x)</button>
                 <br><br><br>
                 <h1 class="optionsText">Walls</h1>
                 <button class="optionsButton" id="optionWallOn" onclick="wallButtonClicked('On')">On (2x)</button>
@@ -65,10 +67,12 @@
         <button class=mobileButton onclick="mobileControllerPressed(inputs.right)">►</button>
     </div>
 
+    <script src='js/fastclick.js'></script>
     <script src="js/detectmobilebrowser.js"></script>
     <script src="js/Food.js"></script>
     <script src="js/GameArea.js"></script>
     <script src="js/Snake.js"></script>
     <script src="js/Game.js"></script>
 </body>
+
 </html>
